@@ -22,4 +22,14 @@ fix2 <- which(tomatos$Treatment == "fertilizer")
 tomatos$Treatment[fix2] <- "Fertilizer"
 tomatos$Treatment <- factor(tomatos$Treatment)
 ```
+```{r}
+test <- c(2,4,6,8,10,12,14,16,18,20)
+summary(test)
+```
+
+```{r}
+grades <- c(90,94,96,90,84,86)
+summary(grades)
+quantile(grades, probs = c(0, 0.25, 0.5, 0.75, 1))
+```
 
