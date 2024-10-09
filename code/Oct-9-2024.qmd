@@ -1,0 +1,37 @@
+---
+title: "Oct-9-2024.qmd"
+format: html
+editor: visual
+---
+
+## Warmup
+
+```{r}
+rm(list=ls())
+library(tidyverse)
+library(here)
+
+read.csv(here("data", "tomato_data.csv"))
+```
+
+```{r}
+tomatos <- read.csv(here("data", "tomato_data.csv"))
+slice(tomatos, c(3,7,9)) |> view()
+```
+
+```{r}
+filter(tomatos, c(fertilizer, Avg_tomato_weight_g  ) )
+```
+
+```{r}
+dir.create(here("Outputs"))
+
+```
+
+```{r}
+write.csv(tomatos,here("Outputs", "tomatos_fixed.csv"), row.names = FALSE) #rows.names prevents r from adding 
+```
+
+```{r}
+toms2 <- read.csv(here("Outputs", "tomatos_fixed.csv")) 
+```
